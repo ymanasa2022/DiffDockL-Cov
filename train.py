@@ -168,6 +168,7 @@ def main_function():
         torch.backends.cudnn.benchmark = True
 
     if args.wandb:
+        wandb.login(key='5ac125ba1e9acd165ef55c83264f6bed7ce10dc7')
         wandb.init(
             entity='',
             settings=wandb.Settings(start_method="fork"),
