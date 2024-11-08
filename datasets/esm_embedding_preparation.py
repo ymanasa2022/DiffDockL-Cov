@@ -7,7 +7,7 @@ from Bio.SeqRecord import SeqRecord
 from tqdm import tqdm
 from Bio import SeqIO
 
-from datasets.constants import three_to_one
+from constants import three_to_one
 
 parser = ArgumentParser()
 parser.add_argument('--out_file', type=str, default="data/prepared_for_esm.fasta")
@@ -19,30 +19,34 @@ biopython_parser = PDBParser()
 
 
 def get_structure_from_file(file_path):
-    structure = biopython_parser.get_structure('random_id', file_path)
-    structure = structure[0]
     l = []
-    for i, chain in enumerate(structure):
-        seq = ''
-        for res_idx, residue in enumerate(chain):
-            if residue.get_resname() == 'HOH':
-                continue
-            residue_coords = []
-            c_alpha, n, c = None, None, None
-            for atom in residue:
-                if atom.name == 'CA':
-                    c_alpha = list(atom.get_vector())
-                if atom.name == 'N':
-                    n = list(atom.get_vector())
-                if atom.name == 'C':
-                    c = list(atom.get_vector())
-            if c_alpha != None and n != None and c != None:  # only append residue if it is an amino acid
-                try:
-                    seq += three_to_one[residue.get_resname()]
-                except Exception as e:
-                    seq += '-'
-                    print("encountered unknown AA: ", residue.get_resname(), ' in the complex ', file_path, '. Replacing it with a dash - .')
-        l.append(seq)
+    try:
+        structure = biopython_parser.get_structure('random_id', file_path)
+        structure = structure[0]
+        # l = []
+        for i, chain in enumerate(structure):
+            seq = ''
+            for res_idx, residue in enumerate(chain):
+                if residue.get_resname() == 'HOH':
+                    continue
+                residue_coords = []
+                c_alpha, n, c = None, None, None
+                for atom in residue:
+                    if atom.name == 'CA':
+                        c_alpha = list(atom.get_vector())
+                    if atom.name == 'N':
+                        n = list(atom.get_vector())
+                    if atom.name == 'C':
+                        c = list(atom.get_vector())
+                if c_alpha != None and n != None and c != None:  # only append residue if it is an amino acid
+                    try:
+                        seq += three_to_one[residue.get_resname()]
+                    except Exception as e:
+                        seq += '-'
+                        print("encountered unknown AA: ", residue.get_resname(), ' in the complex ', file_path, '. Replacing it with a dash - .')
+            l.append(seq)
+    except FileNotFoundError:
+        print(f"File not found: {file_path}. Skipping...")
     return l
 
 data_dir = args.data_dir
