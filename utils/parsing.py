@@ -84,6 +84,8 @@ def parse_train_args():
     parser.add_argument('--merge_clusters', type=int, default=1, help='')
     parser.add_argument('--triple_training', action='store_true', default=False, help='')
     parser.add_argument('--crop_beyond', type=float, default=20, help='')
+    parser.add_argument('--ligand_descriptions', type=str, default=None, help='List of paths to the sdf files of each ligand')
+    parser.add_argument('--protein_path_list', type=str, default=None, help='List of paths to the pdb files of each protein')
 
     # Diffusion
     parser.add_argument('--tr_weight', type=float, default=0.33, help='Weight of translation loss')

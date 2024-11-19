@@ -1,6 +1,7 @@
 import binascii
 import glob
 import os
+import sys
 import pickle
 from collections import defaultdict
 from multiprocessing import Pool
@@ -20,6 +21,8 @@ from datasets.process_mols import read_molecule, get_lig_graph_with_matching, ge
 from utils.diffusion_utils import modify_conformer, set_time
 from utils.utils import read_strings_from_txt, crop_beyond
 from utils import so3, torus
+
+import ipdb
 
 
 class NoiseTransform(BaseTransform):
@@ -175,11 +178,15 @@ class PDBBind(Dataset):
         self.num_conformers = num_conformers
 
         self.atom_radius, self.atom_max_neighbors = atom_radius, atom_max_neighbors
+        print(self.check_all_complexes)
         if not self.check_all_complexes():
             os.makedirs(self.full_cache_path, exist_ok=True)
+            print(self.full_cache_path)
             if protein_path_list is None or ligand_descriptions is None:
+                print('running preprocessing')
                 self.preprocessing()
             else:
+                print('running inference_preprocessing')
                 self.inference_preprocessing()
 
         self.complex_graphs, self.rdkit_ligands = self.collect_all_complexes()
@@ -260,6 +267,7 @@ class PDBBind(Dataset):
         ligands_list = []
         print('Reading molecules and generating local structures with RDKit')
         for ligand_description in tqdm(self.ligand_descriptions):
+            print('on this ligand:',ligand_description)
             mol = MolFromSmiles(ligand_description)  # check if it is a smiles or a path
             if mol is not None:
                 mol = AddHs(mol)
@@ -267,17 +275,19 @@ class PDBBind(Dataset):
                 ligands_list.append(mol)
             else:
                 mol = read_molecule(ligand_description, remove_hs=False, sanitize=True)
-                if not self.keep_local_structures:
-                    mol.RemoveAllConformers()
-                    mol = AddHs(mol)
-                    generate_conformer(mol)
-                ligands_list.append(mol)
+                if mol is not None:
+                    if not self.keep_local_structures:
+                        mol.RemoveAllConformers()
+                        mol = AddHs(mol)
+                        generate_conformer(mol)
+                    ligands_list.append(mol)
 
         if self.esm_embeddings_path is not None:
             print('Reading language model embeddings.')
             lm_embeddings_chains_all = []
             if not os.path.exists(self.esm_embeddings_path): raise Exception('ESM embeddings path does not exist: ',self.esm_embeddings_path)
             for protein_path in self.protein_path_list:
+                print('on this protien', protein_path)
                 embeddings_paths = sorted(glob.glob(os.path.join(self.esm_embeddings_path, os.path.basename(protein_path)) + '*'))
                 lm_embeddings_chains = []
                 for embeddings_path in embeddings_paths:
@@ -287,6 +297,7 @@ class PDBBind(Dataset):
             lm_embeddings_chains_all = [None] * len(self.protein_path_list)
 
         print('Generating graphs for ligands and proteins')
+        print(f'PDBBIND_dir or root : {self.pdbbind_dir}')
         # running preprocessing in parallel on multiple workers and saving the progress every 1000 complexes
         list_indices = list(range(len(self.protein_path_list)//1000+1))
         random.shuffle(list_indices)
@@ -358,6 +369,8 @@ class PDBBind(Dataset):
 
     def get_complex(self, par):
         name, lm_embedding_chains, ligand, ligand_description = par
+        print(f'path to prot: {os.path.join(self.pdbbind_dir, name)}')
+        print(f'path to ligand: {ligand}')
         if not os.path.exists(os.path.join(self.pdbbind_dir, name)) and ligand is None:
             print("Folder not found", name)
             return [], []
@@ -455,7 +468,11 @@ def print_statistics(complex_graphs):
 def read_mol(pdbbind_dir, name, suffix='ligand', remove_hs=False):
     lig = read_molecule(os.path.join(pdbbind_dir, name, f'{name}_{suffix}.sdf'), remove_hs=remove_hs, sanitize=True)
     if lig is None:  # read mol2 file if sdf file cannot be sanitized
-        lig = read_molecule(os.path.join(pdbbind_dir, name, f'{name}_{suffix}.mol2'), remove_hs=remove_hs, sanitize=True)
+        try:
+            lig = read_molecule(os.path.join(pdbbind_dir, name, f'{name}_{suffix}.mol2'), remove_hs=remove_hs, sanitize=True)
+        except Exception as e:
+            print(f"error in read_mol: {e}")
+            sys.exit(f"failed to read lig: {lig}")
     return lig
 
 

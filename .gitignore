@@ -165,5 +165,10 @@ temp5.py
 temp6.py
 temp7.py
 esm
+
+# ymanasa ignoring
 *err
 *out
+datasets/*pt
+datasets/*ipynb
+.test_retrain.out.swp

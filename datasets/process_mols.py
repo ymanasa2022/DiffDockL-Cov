@@ -313,7 +313,12 @@ def generate_conformer(mol):
         get_logger().info('rdkit coords could not be generated without using random coords. using random coords now.')
         ps.useRandomCoords = True
         AllChem.EmbedMolecule(mol, ps)
-        AllChem.MMFFOptimizeMolecule(mol, confId=0)
+        try: 
+            AllChem.MMFFOptimizeMolecule(mol, confId=0)
+        except ValueError as e:
+            print(f"Warning: MMFF optimization error: {e}. Skipping {mol}...")
+            return None
+    
         return True
     #else:
     #    AllChem.MMFFOptimizeMolecule(mol, confId=0)
@@ -429,6 +434,16 @@ def read_molecule(molecule_file, sanitize=False, calc_charges=False, remove_hs=F
     elif molecule_file.endswith('.sdf'):
         supplier = Chem.SDMolSupplier(molecule_file, sanitize=False, removeHs=False)
         mol = supplier[0]
+        if mol is not None: 
+            try: 
+                Chem.SanitizeMol(mol)
+            except Chem.KekulizeException:
+                print(f"Warning: Failed to Kekulize molecule: {molecule_file}. Skipping...")
+                return None
+            except Chem.AtomValenceException:
+                print(f"Warning: Atom with invalid valence in molecule: {molecule_file}. Skipping...")
+                return None
+
     elif molecule_file.endswith('.pdbqt'):
         with open(molecule_file) as file:
             pdbqt_data = file.readlines()
