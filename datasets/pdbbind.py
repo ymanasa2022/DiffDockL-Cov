@@ -267,10 +267,11 @@ class PDBBind(Dataset):
                 ligands_list.append(mol)
             else:
                 mol = read_molecule(ligand_description, remove_hs=False, sanitize=True)
-                if not self.keep_local_structures:
-                    mol.RemoveAllConformers()
-                    mol = AddHs(mol)
-                    generate_conformer(mol)
+                if mol is not None:
+                    if not self.keep_local_structures:
+                        mol.RemoveAllConformers()
+                        mol = AddHs(mol)
+                        generate_conformer(mol)
                 ligands_list.append(mol)
 
         if self.esm_embeddings_path is not None:

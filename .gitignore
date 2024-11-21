@@ -167,3 +167,8 @@ temp7.py
 esm
 *err
 *out
+
+
+
+
+ datasets/pdbbind_embeddings.pt

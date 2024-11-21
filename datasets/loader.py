@@ -79,10 +79,18 @@ def construct_loader(args, t_to_sigma, device):
                        'matching_tries': args.matching_tries}
 
         if args.dataset == 'pdbbind' or args.dataset == 'generalisation' or args.combined_training:
+            with open(args.protein_path_list, 'r') as file:
+                print(f'reading {args.protein_path_list}...')
+                protein_path_list = [line.strip() for line in file]
+            with open(args.ligand_descriptions, 'r') as file:
+                print(f'reading {args.ligand_descriptions}...')
+                ligand_descriptions = [line.strip() for line in file]
+
             train_dataset = PDBBind(cache_path=args.cache_path, split_path=args.split_train, keep_original=True,
                                     num_conformers=args.num_conformers, root=args.pdbbind_dir,
                                     esm_embeddings_path=args.pdbbind_esm_embeddings_path,
-                                    protein_file=args.protein_file, **common_args)
+                                    protein_file=args.protein_file, **common_args, protein_path_list=protein_path_list, 
+                                    ligand_descriptions=ligand_descriptions)
 
         if args.dataset == 'moad' or args.combined_training:
             train_dataset2 = MOAD(cache_path=args.cache_path, split='train', keep_original=True,
