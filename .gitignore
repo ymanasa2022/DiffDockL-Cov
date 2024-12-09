@@ -170,5 +170,6 @@ esm
 *err
 *out
 datasets/*pt
-datasets/*ipynb
+datasets/*out
+datasets/*err
 .test_retrain.out.swp

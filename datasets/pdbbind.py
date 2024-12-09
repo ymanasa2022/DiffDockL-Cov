@@ -178,10 +178,8 @@ class PDBBind(Dataset):
         self.num_conformers = num_conformers
 
         self.atom_radius, self.atom_max_neighbors = atom_radius, atom_max_neighbors
-        print(self.check_all_complexes)
         if not self.check_all_complexes():
             os.makedirs(self.full_cache_path, exist_ok=True)
-            print(self.full_cache_path)
             if protein_path_list is None or ligand_descriptions is None:
                 print('running preprocessing')
                 self.preprocessing()
@@ -371,6 +369,7 @@ class PDBBind(Dataset):
         name, lm_embedding_chains, ligand, ligand_description = par
         print(f'path to prot: {os.path.join(self.pdbbind_dir, name)}')
         print(f'path to ligand: {ligand}')
+        print(f'name: {name}')
         if not os.path.exists(os.path.join(self.pdbbind_dir, name)) and ligand is None:
             print("Folder not found", name)
             return [], []
@@ -472,7 +471,7 @@ def read_mol(pdbbind_dir, name, suffix='ligand', remove_hs=False):
             lig = read_molecule(os.path.join(pdbbind_dir, name, f'{name}_{suffix}.mol2'), remove_hs=remove_hs, sanitize=True)
         except Exception as e:
             print(f"error in read_mol: {e}")
-            sys.exit(f"failed to read lig: {lig}")
+            sys.exit(f"failed to read lig: {lig}. Exiting...")
     return lig
 
 
