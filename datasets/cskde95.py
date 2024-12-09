@@ -1,6 +1,7 @@
 import subprocess
 import os
 import glob
+from create_csv_input import csv_prot_lig
 
 def process_structure_with_commands(prot_lig_dir, out_dir):
     '''
@@ -40,6 +41,8 @@ def main():
 
     err = process_structure_with_commands(prot_lig_dir, out_dir)
     print(err)
+    csv_prot_lig(prot_lig_dir='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95/processed_structures', 
+                 out_file='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95/evaluation_CSKDE95.csv')
 
 if __name__ == "__main__":
     main()
