@@ -57,11 +57,11 @@ def create_random_subset(file, subset_size, out_file):
 
 def main():
     # create big csv if it dne
-    big_csv='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/cov_pdb_eval.csv'
+    big_csv='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_obabel/evaluation_CSKDE95_obabel.csv'
     if not os.path.exists(big_csv):
-        csv_prot_lig(prot_lig_dir='CovPDB_complexes', out_file=big_csv)
+        csv_prot_lig(prot_lig_dir='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_obabel', out_file=big_csv)
     # create subset 
-    create_random_subset(file=big_csv, subset_size=200, out_file='subset_covpdb_eval.csv')
+    # create_random_subset(file=big_csv, subset_size=200, out_file='subset_covpdb_eval.csv')
 
 if __name__ == "__main__":
     main()
