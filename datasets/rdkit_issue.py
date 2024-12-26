@@ -39,7 +39,7 @@ if mol:
 
     if mol_std:
         # resolve aromaticity issues
-        rdmolops.Kekulize(mol_sani, clearAromaticFlags=True)
-        Chem.MolToMolFile(mol_sani, sdf_file)
+        rdmolops.Kekulize(mol_std, clearAromaticFlags=True)
+        Chem.MolToMolFile(mol_std, sdf_file)
     else:
        print('mol loading failed with datamol, trying rdkit kekulize')
