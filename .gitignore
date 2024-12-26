@@ -169,6 +169,7 @@ esm
 # ymanasa ignoring
 *err
 *out
+datasets/colab_fold/
 datasets/*pt
 datasets/*out
 datasets/*err
