@@ -112,21 +112,21 @@ def main():
     out_dir = '/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_datamol_af2/'
     
     tool = 'datamol'
-    # # preprocessing structures/ligands
-    # print("processing proteins...")
-    # err = process_structures(prot_lig_dir, out_dir, tool)
-    # print(err)
+    # preprocessing structures/ligands
+    print("processing proteins...")
+    err = process_structures(prot_lig_dir, out_dir)
+    print(err)
     print("processing ligands next...")
     err_lig = process_ligands(prot_lig_dir, out_dir, tool)
     print(err_lig)
     print(len(err_lig))
 
-    # # csv for inference
-    # out_file='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_datamol_af2/evaluation_CSKDE95_datamol_af2.csv'
-    # if not os.path.exists(out_file): 
-    #     csv_prot_lig(prot_lig_dir=out_dir, out_file=out_file)
-    # else: 
-    #     print('CSV already exists. remove before creating new csv')
+    # csv for inference
+    out_file='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_datamol_af2/evaluation_CSKDE95_datamol_af2.csv'
+    if not os.path.exists(out_file): 
+        csv_prot_lig(prot_lig_dir=out_dir, out_file=out_file)
+    else: 
+        print('CSV already exists. remove before creating new csv')
 
 if __name__ == "__main__":
     main()
