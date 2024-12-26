@@ -79,23 +79,23 @@ def process_ligands(prot_lig_dir, out_dir, tool='datamol'):
             subprocess.run(obabel_format_fix, shell=True, check=True)
             mol = Chem.MolFromMol2File(mol2_obabel_fixed ,sanitize=False, removeHs=False)
             if mol:
-                mol = dm.fix_mol(mol)
-                if mol:
-                    mol = dm.sanitize_mol(mol)
+                mol_fix = dm.fix_mol(mol)
+                if mol_fix:
+                    mol_sani = dm.sanitize_mol(mol_fix)
                 else:
-                    err_lig.append(f'{complex_name}_ligand')
-                    print(f'sanitization failed {complex_name}_ligand')
-                if mol:
-                    mol = dm.standardize_mol(mol)
+                    print(f'sanitization failed for {complex_name}_ligand')
+                    # err_lig.append(f'{complex_name}_ligand')
+                if mol_sani:
+                    mol_std = dm.standardize_mol(mol_sani)
                 else:
-                    err_lig.append(f'{complex_name}_ligand')
-                    print(f'sanitization failed {complex_name}_ligand')
-
-            else: 
-                print('mol loading with datamol failed')
-            # resolve aromaticity issues
-            rdmolops.Kekulize(mol, clearAromaticFlags=True)
-            Chem.MolToMolFile(mol, sdf_file) 
+                    # err_lig.append(f'{complex_name}_ligand')
+                    print(f'standardization failed for {complex_name}_ligand')
+                if mol_std:
+                    # resolve aromaticity issues
+                    rdmolops.Kekulize(mol_std, clearAromaticFlags=True)
+                    Chem.MolToMolFile(mol_std, sdf_file) 
+                else:
+                    print('mol loading failed with datamol')
 
         else: # tool == 'obabel' or None
             print('running obabel for ligand conversion')
@@ -112,20 +112,21 @@ def main():
     out_dir = '/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_datamol_af2/'
     
     tool = 'datamol'
-    # preprocessing structures/ligands
-    print("processing proteins...")
-    err = process_structures(prot_lig_dir, out_dir, tool)
-    print(err)
+    # # preprocessing structures/ligands
+    # print("processing proteins...")
+    # err = process_structures(prot_lig_dir, out_dir, tool)
+    # print(err)
     print("processing ligands next...")
     err_lig = process_ligands(prot_lig_dir, out_dir, tool)
     print(err_lig)
+    print(len(err_lig))
 
-    # csv for inference
-    out_file='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_datamol_af2/evaluation_CSKDE95_datamol_af2.csv'
-    if not os.path.exists(out_file): 
-        csv_prot_lig(prot_lig_dir=out_dir, out_file=out_file)
-    else: 
-        print('CSV already exists. remove before creating new csv')
+    # # csv for inference
+    # out_file='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_datamol_af2/evaluation_CSKDE95_datamol_af2.csv'
+    # if not os.path.exists(out_file): 
+    #     csv_prot_lig(prot_lig_dir=out_dir, out_file=out_file)
+    # else: 
+    #     print('CSV already exists. remove before creating new csv')
 
 if __name__ == "__main__":
     main()
