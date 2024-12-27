@@ -2,7 +2,7 @@ import glob
 import os 
 import random
 
-def csv_prot_lig(prot_lig_dir, out_file, suffix='_processed'):
+def csv_prot_lig(prot_lig_dir, out_file):
     '''
     write csv with protein name, path to pdb, path to sdf of ligand 
     into a csv used as input into diffdockL for inference
@@ -10,9 +10,15 @@ def csv_prot_lig(prot_lig_dir, out_file, suffix='_processed'):
     suffix (str): any suffix after pdb id in pdb file names eg. for a123, pdb file is: a123_processed.pdb, suffix = '_processed'
     out_file (str): output csv with protein name, protein pdb path and ligand sdf path for diffdockL
     '''
-    for protein_path in glob.glob(f"{prot_lig_dir}/**/*{suffix}.pdb", recursive=True):
-        complex_name = os.path.basename(os.path.dirname(protein_path))
-        ligand_description = glob.glob(os.path.join(os.path.dirname(protein_path), "*.sdf"))[0]
+    for protein_path in glob.glob(f"{prot_lig_dir}/**/*.pdb", recursive=True):
+        # import ipdb; ipdb.set_trace()
+        prot_path_split = protein_path.split('/') # protein file path dir list
+        complex_name = prot_path_split[-1].split('_')[0] # pdb code 
+
+        lig_path_split = prot_path_split[:-1]
+        lig_path_split.append(f'{complex_name}_ligand.sdf')
+
+        ligand_description = '/'.join(lig_path_split) # join directories 
 
         # create out_file file if dne
         open(out_file, 'w').write('complex_name,protein_path,ligand_description,protein_sequence\n') if not os.path.exists(out_file) else None
@@ -58,13 +64,12 @@ def create_random_subset(file, subset_size, out_file):
 
 def main():
     # create big csv if it dne
-    big_csv='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_obabel/evaluation_CSKDE95_obabel.csv'
-    if not os.path.exists(big_csv):
-        csv_prot_lig(prot_lig_dir='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_obabel', out_file=big_csv)
+    out_file='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_datamol_af2/evaluation_CSKDE95_datamol_af2.csv'
+    prot_dir='/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/evaluation_CSKDE95_datamol_af2'
+    if not os.path.exists(out_file): 
+        csv_prot_lig(prot_lig_dir=prot_dir, out_file=out_file)
     # create subset 
     # create_random_subset(file=big_csv, subset_size=200, out_file='subset_covpdb_eval.csv')
 
 if __name__ == "__main__":
     main()
-
-
