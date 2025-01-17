@@ -1,0 +1,645 @@
+4cdc
+/nfs/turbo/umms-maom/ymanasa/opt/DiffDockL-Cov/results/evaluate_cov.py:45: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  all_pose_evals = pd.concat([all_pose_evals] + dfs, ignore_index=True)
+6j4p
+not all poses were predicted for 6j4p, moving to next
+4qps
+not all poses were predicted for 4qps, moving to next
+1hbj
+4dmy
+/nfs/turbo/umms-maom/ymanasa/opt/DiffDockL-Cov/results/evaluate_cov.py:45: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  all_pose_evals = pd.concat([all_pose_evals] + dfs, ignore_index=True)
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:38] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:38] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+1qdq
+not all poses were predicted for 1qdq, moving to next
+4luc
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:42] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:42] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:42] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:42] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:44] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:44] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:44] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:44] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4luc/4luc_processed.pdb with error: Could not load molecule.
+[08:35:44] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:44] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: Missing, Attachment points; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:35:44] UFFTYPER: Unrecognized charge state for atom: 14
+4i9o
+[08:35:47] UFFTYPER: Unrecognized charge state for atom: 14
+[08:35:48] UFFTYPER: Unrecognized charge state for atom: 14
+[08:35:48] UFFTYPER: Unrecognized charge state for atom: 14
+[08:35:49] UFFTYPER: Unrecognized charge state for atom: 14
+[08:35:49] UFFTYPER: Unrecognized charge state for atom: 14
+[08:35:49] UFFTYPER: Unrecognized charge state for atom: 14
+[08:35:50] UFFTYPER: Unrecognized charge state for atom: 14
+[08:35:50] UFFTYPER: Unrecognized charge state for atom: 14
+[08:35:50] UFFTYPER: Unrecognized charge state for atom: 14
+4mll
+not all poses were predicted for 4mll, moving to next
+6ary
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+5vbm
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5vbm/5vbm_processed.pdb with error: Could not load molecule.
+[08:36:08] UFFTYPER: Unrecognized charge state for atom: 17
+6hmu
+[08:36:11] UFFTYPER: Unrecognized charge state for atom: 17
+[08:36:12] UFFTYPER: Unrecognized charge state for atom: 17
+[08:36:13] UFFTYPER: Unrecognized charge state for atom: 17
+[08:36:14] UFFTYPER: Unrecognized charge state for atom: 17
+[08:36:15] UFFTYPER: Unrecognized charge state for atom: 17
+[08:36:15] UFFTYPER: Unrecognized charge state for atom: 17
+[08:36:16] UFFTYPER: Unrecognized charge state for atom: 17
+[08:36:17] UFFTYPER: Unrecognized charge state for atom: 17
+[08:36:18] UFFTYPER: Unrecognized charge state for atom: 17
+5p9m
+5j9z
+2xyp
+6vgy
+2xyg
+5ac0
+3sn8
+not all poses were predicted for 3sn8, moving to next
+1ghm
+[08:38:03] UFFTYPER: Unrecognized charge state for atom: 5
+3orz
+[08:38:06] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:06] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:07] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:08] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:09] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:10] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:11] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:12] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:13] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:14] UFFTYPER: Unrecognized charge state for atom: 5
+5maj
+[08:38:15] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:15] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:16] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:17] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:17] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:18] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:19] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:20] UFFTYPER: Unrecognized charge state for atom: 5
+[08:38:20] UFFTYPER: Unrecognized charge state for atom: 5
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:21] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:21] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:21] UFFTYPER: Unrecognized charge state for atom: 11
+5orl
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:22] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:22] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:22] UFFTYPER: Unrecognized charge state for atom: 11
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:22] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:22] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:22] UFFTYPER: Unrecognized charge state for atom: 11
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:22] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:22] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:22] UFFTYPER: Unrecognized charge state for atom: 11
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:22] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:22] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:22] UFFTYPER: Unrecognized charge state for atom: 11
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] UFFTYPER: Unrecognized charge state for atom: 11
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] UFFTYPER: Unrecognized charge state for atom: 11
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] UFFTYPER: Unrecognized charge state for atom: 11
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] UFFTYPER: Unrecognized charge state for atom: 11
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5orl/5orl_processed.pdb with error: Could not load molecule.
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Mobile-H groups: Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:38:23] UFFTYPER: Unrecognized charge state for atom: 11
+5dzj
+5qir
+6puh
+[08:38:53] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:53] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+5u17
+[08:38:55] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:55] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:55] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:55] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:56] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:56] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:57] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:57] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:57] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:57] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:58] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:58] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:59] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:59] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:59] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:38:59] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:39:00] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:39:00] WARNING:  Problems/mismatches: Mobile-H( Mobile-H groups: Attachment points, Number)
+
+[08:39:00] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:00] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+3hhi
+not all poses were predicted for 3hhi, moving to next
+3h0e
+[08:39:08] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:08] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:09] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:09] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:10] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:10] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:11] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:11] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:12] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:12] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:13] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:13] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:14] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:14] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:15] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:15] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:16] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:39:16] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+5qh8
+4cde
+5xhr
+not all poses were predicted for 5xhr, moving to next
+2g8e
+not all poses were predicted for 2g8e, moving to next
+3q7z
+not all poses were predicted for 3q7z, moving to next
+3ovx
+4an1
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+3zmh
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/3zmh/3zmh_processed.pdb with error: Could not load molecule.
+5d11
+6yq2
+6iuo
+not all poses were predicted for 6iuo, moving to next
+4amz
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+5l6p
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5l6p/5l6p_processed.pdb with error: Could not load molecule.
+1ewl
+not all poses were predicted for 1ewl, moving to next
+2z9w
+6ezp
+2q9m
+[08:41:34] UFFTYPER: Unrecognized charge state for atom: 5
+3m2z
+[08:41:35] UFFTYPER: Unrecognized charge state for atom: 5
+[08:41:35] UFFTYPER: Unrecognized charge state for atom: 5
+[08:41:36] UFFTYPER: Unrecognized charge state for atom: 5
+[08:41:36] UFFTYPER: Unrecognized charge state for atom: 5
+[08:41:37] UFFTYPER: Unrecognized charge state for atom: 5
+[08:41:37] UFFTYPER: Unrecognized charge state for atom: 5
+[08:41:37] UFFTYPER: Unrecognized charge state for atom: 5
+[08:41:38] UFFTYPER: Unrecognized charge state for atom: 5
+[08:41:38] UFFTYPER: Unrecognized charge state for atom: 5
+[08:41:39] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:39] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+5mjb
+[08:41:42] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:42] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:43] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:44] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:44] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:45] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:45] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:46] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:46] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:47] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:47] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:48] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:48] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:49] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:49] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:50] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+[08:41:50] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: One instead of multiple, Attachment points, Number)
+
+1xrl
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+WARNING: Energy ratio module failed to calculate ensemble conformation energy for InChI=1S/C7H3.C3H4NO.C/c1-2-4-6-5(3-1)7(4)6;1-3(5)2-4;/h2-4H;2,5H,1H2;: Failed to generate conformations.
+5v6v
+6j4p
+not all poses were predicted for 6j4p, moving to next
+1hv7
+[08:42:51] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:51] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+3k7f
+not all poses were predicted for 3k7f, moving to next
+3t9t
+not all poses were predicted for 3t9t, moving to next
+6aff
+[08:42:52] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:52] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:53] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:53] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:53] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:53] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:54] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:54] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:54] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:54] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:55] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:55] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:55] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:55] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:56] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:56] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:57] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+[08:42:57] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number; Mobile-H groups: Missing, Attachment points)
+
+4bs5
+4amy
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+1ewm
+not all poses were predicted for 1ewm, moving to next
+4cl8
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/4cl8/4cl8_processed.pdb with error: Could not load molecule.
+[08:43:43] ERROR: *Conversion failed*
+
+6wp8
+[08:43:47] ERROR: *Conversion failed*
+
+[08:43:48] ERROR: *Conversion failed*
+
+[08:43:49] ERROR: *Conversion failed*
+
+[08:43:50] ERROR: *Conversion failed*
+
+[08:43:50] ERROR: *Conversion failed*
+
+[08:43:50] ERROR: *Conversion failed*
+
+[08:43:51] ERROR: *Conversion failed*
+
+[08:43:52] ERROR: *Conversion failed*
+
+[08:43:52] ERROR: *Conversion failed*
+
+[08:43:53] ERROR: *Conversion failed*
+
+[08:43:53] ERROR: *Conversion failed*
+
+[08:43:53] ERROR: *Conversion failed*
+
+5ty2
+not all poses were predicted for 5ty2, moving to next
+5o3y
+3oj8
+[08:44:28] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:28] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+3kwb
+[08:44:32] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:32] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:33] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:33] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:34] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:34] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:35] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:35] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:36] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:36] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:37] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:37] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:37] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:37] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:38] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:38] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:39] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:39] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Locations or number, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+5ac2
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/5ac2/5ac2_processed.pdb with error: Could not load molecule.
+[08:44:42] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:42] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+1zpb
+[08:44:51] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:51] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:52] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:52] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:53] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:53] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:54] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:54] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:55] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:55] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:56] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:56] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:58] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:58] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:59] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:44:59] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:45:00] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+[08:45:00] WARNING:  Problems/mismatches: Mobile-H( Hydrogens: Number; Mobile-H groups: One instead of multiple, Attachment points, Number; Charge(s): Do not match; Proton balance: Does not match)
+
+6c7z
+1fj8
+4wsk
+6q6l
+not all poses were predicted for 6q6l, moving to next
+3mzd
+not all poses were predicted for 3mzd, moving to next
+5vnp
+2op9
+[08:46:21] UFFTYPER: Unrecognized atom type: B_ (22)
+4lqm
+[08:46:24] UFFTYPER: Unrecognized atom type: B_ (22)
+[08:46:25] UFFTYPER: Unrecognized atom type: B_ (22)
+[08:46:26] UFFTYPER: Unrecognized atom type: B_ (22)
+[08:46:27] UFFTYPER: Unrecognized atom type: B_ (22)
+[08:46:28] UFFTYPER: Unrecognized atom type: B_ (22)
+[08:46:29] UFFTYPER: Unrecognized atom type: B_ (22)
+[08:46:30] UFFTYPER: Unrecognized atom type: B_ (22)
+[08:46:31] UFFTYPER: Unrecognized atom type: B_ (22)
+[08:46:32] UFFTYPER: Unrecognized atom type: B_ (22)
+5uxz
+2wj1
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:16] UFFTYPER: Unrecognized charge state for atom: 13
+3qsd
+not all poses were predicted for 3qsd, moving to next
+6hn2
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:16] UFFTYPER: Unrecognized charge state for atom: 13
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:17] UFFTYPER: Unrecognized charge state for atom: 13
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:17] UFFTYPER: Unrecognized charge state for atom: 13
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:17] UFFTYPER: Unrecognized charge state for atom: 13
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:17] UFFTYPER: Unrecognized charge state for atom: 13
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:17] UFFTYPER: Unrecognized charge state for atom: 13
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:17] UFFTYPER: Unrecognized charge state for atom: 13
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:18] UFFTYPER: Unrecognized charge state for atom: 13
+Could not load molecule from /home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2/6hn2/6hn2_processed.pdb with error: Could not load molecule.
+[08:47:18] UFFTYPER: Unrecognized charge state for atom: 13
+1td2
+5e1i
+3svv
+4cdf
+2dw5
+6eej
+not all poses were predicted for 6eej, moving to next
+5d6e
+4jxg
+not all poses were predicted for 4jxg, moving to next
+3pdf
+5rep
+1nqc
+4qgv
+[08:49:48] UFFTYPER: Unrecognized charge state for atom: 5
+3otu
+[08:49:53] UFFTYPER: Unrecognized charge state for atom: 5
+[08:49:54] UFFTYPER: Unrecognized charge state for atom: 5
+[08:49:55] UFFTYPER: Unrecognized charge state for atom: 5
+[08:49:56] UFFTYPER: Unrecognized charge state for atom: 5
+[08:49:57] UFFTYPER: Unrecognized charge state for atom: 5
+[08:49:58] UFFTYPER: Unrecognized charge state for atom: 5
+[08:49:59] UFFTYPER: Unrecognized charge state for atom: 5
+[08:50:00] UFFTYPER: Unrecognized charge state for atom: 5
+[08:50:01] UFFTYPER: Unrecognized charge state for atom: 5
+6j7b
+not all poses were predicted for 6j7b, moving to next
+4x6j
