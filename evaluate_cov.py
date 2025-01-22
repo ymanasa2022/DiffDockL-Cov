@@ -1,8 +1,13 @@
+######
+# By Manasa Yadavalli 
+# Jan 2025
+######
 import glob
 import os 
 from posebusters import PoseBusters
 from pathlib import Path
 import pandas as pd
+import numpy as np 
 
 # use posebusters conda env
 def make_eval_df(true_poses, pred_poses, pose_bust_cols):
@@ -63,27 +68,27 @@ def score_model_eval(all_pose_buster_df, num_gen=10, rmsd_check=2):
     sorted_df = all_pose_buster_df.groupby('protein', group_keys=False).apply(lambda group: group.sort_values('rmsd'))
     group_df = sorted_df.groupby('protein')
 
-    num_prots= len(group_df.groups)
-
     # initializing values/df
     columns = ['Protein', 'Best RMSD', 'Mean RMSD', 'Std Dev of RMSD', 'RMSD < 2 %']
     metrics_df = pd.DataFrame(columns=columns)
+
     count_best_poses = 0 # counting lowest rmsd sampled poses that have RMSD < 2A 
-    count_mean = 0 # for mean count 
+    rmsd_best_np = np.array([])
+
     for prot, row_index in group_df.groups.items(): 
-        # best rmsd
+        # best rmsd: top-1
         rmsd_best = sorted_df.loc[row_index[0], 'rmsd']
         count_best_poses += (rmsd_best < rmsd_check)
 
-        # mean rmsd assessment 
+        rmsd_best_np = np.append(rmsd_best_np, rmsd_best)
+
+        # mean rmsd assessment for each prot
         group_rmsd = group_df.get_group(prot)
         mean_rmsd = group_rmsd['rmsd'].mean()
-        count_mean += (mean_rmsd < rmsd_check)
-
-        # spread of RMSDs
+        # spread of RMSDs for each prot
         std_rmsd = group_rmsd['rmsd'].std()
 
-        # % of poses that has < 2 RMSD
+        # % of poses that has < 2 RMSD per prot
         count_poses = 0
         for index in row_index: 
             rmsd_value = sorted_df.loc[index, 'rmsd']
@@ -91,17 +96,22 @@ def score_model_eval(all_pose_buster_df, num_gen=10, rmsd_check=2):
         rmsd_per_prot = count_poses/num_gen * 100 
 
         # update metrics
-        metrics_df = pd.concat([metrics_df, pd.DataFrame({'Protein': [prot],
+        metrics_per_prot = pd.concat([metrics_df, pd.DataFrame({'Protein': [prot],
         'Best RMSD': [rmsd_best],
         'Mean RMSD': [mean_rmsd],
         'Std Dev of RMSD': [std_rmsd],
         'RMSD < 2 %': [rmsd_per_prot], })], ignore_index=True)
 
-        mean_rmsd_perc = count_mean / num_prots *100
+    # median of top-1 RMSDs
+    median_top1 = round(np.mean(rmsd_best_np), 2)
+    std_top1 = round(np.std(rmsd_best_np), 2)
 
-        best_gen_perc = count_best_poses/num_prots * 100
+    # Top-1 RMSD % < 2 
+    count = np.sum(rmsd_best_np < 2)
+    print(rmsd_best_np)
+    top1_rmsd_perc = round(count/len(rmsd_best_np) * 100, 2)
 
-    return mean_rmsd_perc, best_gen_perc, metrics_df
+    return top1_rmsd_perc, median_top1, std_top1, metrics_per_prot
 
 def confidence_model_eval(all_pose_buster_df, num_gen=10, rmsd_check=2):
     '''
@@ -118,10 +128,10 @@ def confidence_model_eval(all_pose_buster_df, num_gen=10, rmsd_check=2):
     # best pose 
     count_rank1 = 0 
 
-    all_df['protein'] = all_df['molecule'].str.extract(r'^(.*?)_') 
-    all_df['rank'] = all_df['molecule'].str.extract(r'rank(\d+)').astype(int)
+    all_pose_buster_df['protein'] = all_pose_buster_df['molecule'].str.extract(r'^(.*?)_') 
+    all_pose_buster_df['rank'] = all_pose_buster_df['molecule'].str.extract(r'rank(\d+)').astype(int)
 
-    sorted_df = all_df.groupby('protein', group_keys=False).apply(lambda group: group.sort_values('rank'))
+    sorted_df = all_pose_buster_df.groupby('protein', group_keys=False).apply(lambda group: group.sort_values('rank'))
     group_df = sorted_df.groupby('protein')
 
     num_prots= len(group_df.groups)
@@ -265,8 +275,8 @@ def main():
     'rmsd',
     'kabsch_rmsd',
     'centroid_distance']
-    true_poses = '/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2'
-    pred_poses = '/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/results/cskde95_inference'
+    true_poses = '/home/ymanasa/posebusters_eval/CSKDE95_datamol_af2'
+    pred_poses = '/home/ymanasa/posebusters_eval/cskde95_inference'
     all_df = make_eval_df(true_poses, pred_poses, pose_bust_cols=pose_bust_cols)
     print(all_df.head())
     print(all_df.shape)
