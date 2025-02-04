@@ -4,11 +4,13 @@
 ######
 import glob
 import os 
+import re
 from posebusters import PoseBusters
 from pathlib import Path
 import pandas as pd
 import numpy as np 
 from rdkit import Chem
+from scipy.stats import spearmanr
 from posebusters.modules.rmsd import check_rmsd
 
 # use posebusters conda env
@@ -97,6 +99,7 @@ def rmsd_only(true_poses, pred_poses, rmsd_threshold=2.0):
         poses.remove(rank1_file[0]) # removing duplicate rank1 pose
 
         count_poses = 0
+        # import ipdb; ipdb.set_trace()
         pose_rmsd = np.array([])
         for pose in poses: 
             true_ligand_supplier = Chem.SDMolSupplier(true_lig)
@@ -116,12 +119,15 @@ def rmsd_only(true_poses, pred_poses, rmsd_threshold=2.0):
         prots = np.append(prots, prot)
 
         # update metrics per prot 
-        metrics_per_prot = pd.concat([metrics_df, pd.DataFrame({'Protein': prot,
-        'Best RMSD': rmsd_top1,
+        row = {
+        'Protein': prot,
+        'Best RMSD': np.min(pose_rmsd),
         'Mean RMSD': np.mean(pose_rmsd),
         'Std Dev of RMSD': np.std(pose_rmsd),
-        'RMSD < 2 %': count_poses/len(poses) * 100 , })], ignore_index=True)
-
+        'RMSD < 2 %': count_poses / len(poses) * 100,
+        }
+        metrics_df = pd.concat([metrics_df, pd.DataFrame([row])], ignore_index=True)
+        
     # median of top-1 RMSDs
     median_top1 = round(np.mean(rmsd_top1), 2)
     std_top1 = round(np.std(rmsd_top1), 2)
@@ -138,7 +144,7 @@ def rmsd_only(true_poses, pred_poses, rmsd_threshold=2.0):
     print('prot with min rmsd:', prot_min_rmsd, '\nrmsd:', round(prot_rmsd_best[prot_min_rmsd], 3))
     print('prot with max rmsd:', prot_max_rmsd, '\nrmsd:', round(prot_rmsd_best[prot_max_rmsd], 3))
 
-    return top1_rmsd_perc, median_top1, std_top1, no_poses, metrics_per_prot
+    return top1_rmsd_perc, median_top1, std_top1, no_poses, metrics_df
 
 def score_model_posebust(all_pose_buster_df, num_gen=10, rmsd_check=2):
     '''
@@ -201,20 +207,71 @@ def score_model_posebust(all_pose_buster_df, num_gen=10, rmsd_check=2):
 
     return top1_rmsd_perc, median_top1, std_top1, metrics_per_prot
 
-def confidence_model_eval(all_pose_buster_df, num_gen=10, rmsd_check=2):
+def confidence_model_eval(true_poses, pred_poses, num_gen=10, rmsd_threshold=2):
     '''
-    assesses the performance of poses ranked by DiffDock-L's confidence model
-    input: 
-        all_pose_buster_df (DataFrame): output from make_eval_df made using PoseBusters 
-        rmsd_check (float): Å RMSD threshold check. Default: 2
-        num_gen (int): number of poses generated for a ligand
-    output: 
-        top_pose: % of times when the top ranked pose had the lowest rmsd amongst all sampled poses 
-    '''
-    # best pose 
-    
+    assess diffdock-L's confidence model on predicted top-1 poses 
+    inputs
+    -------
+    true_poses (str): path to ground truth poses 
+    pred_poses (str): path to predicted poses
+    rmsd_threshold (float): RMSD cutoff. Default: 2.0
+    num_gen (int): number of poses generated 
 
-    return rank1_corrects
+    outputs
+    -------
+    top1_rmsd_perc(float): % of proteins with the lowest RMSD pose ranked #1
+    spearman_corr(float): correlation between predicted confidence score/ranking and actual RMSD  
+    p_value(float): 
+    '''
+    prots = np.array([])
+    count = 0
+    df = pd.DataFrame(columns=['prot', 'pose_rank', 'confidence_score', 'RMSD'])
+    for prot in glob.glob(f"{true_poses}/**/*.pdb", recursive=True):
+        
+        prot_path_split = prot.split('/') 
+        complex_name = prot_path_split[-1].split('_')[0] # pdb code 
+
+        true_lig = f'{true_poses}/{complex_name}/{complex_name}_ligand.sdf'
+        poses = glob.glob(f"{pred_poses}/{complex_name}/*.sdf")
+
+        rank1_file = [pose for pose in poses if 'rank1.sdf' in pose]
+        if len(poses) < 10: # to filter out failed sampling attempts 
+            print(f'not all poses were predicted for {complex_name}, moving to next')
+            continue # move to next prot 
+
+        poses.remove(rank1_file[0]) # removing duplicate rank1 pose
+        pose_rmsd = np.array([])
+        rmsd_best_rank = 0
+        for pose in poses: 
+            true_ligand_supplier = Chem.SDMolSupplier(true_lig)
+            predicted_pose_supplier = Chem.SDMolSupplier(pose)
+        
+            mol_true = true_ligand_supplier[0] # mol obj
+            mol_pred = predicted_pose_supplier[0]
+            rmsd_dict = check_rmsd(mol_pred, mol_true, rmsd_threshold)
+            rmsd_result = rmsd_dict['results']['rmsd']
+
+            pose_rmsd = np.append(pose_rmsd, rmsd_result)
+            # updating df for spearman corr
+            match = re.search(r"rank(\d+)_confidence-([\d\.]+)", pose)
+            if match:
+                rank_number = int(match.group(1)) 
+                confidence_score = match.group(2)
+                confidence_score = float(confidence_score.rstrip('.'))
+            
+            df.loc[len(df)] = [prot, rank_number, confidence_score, rmsd_result]
+            if 'rank1' in pose:
+                rmsd_best_rank = rmsd_dict['results']['rmsd']     
+        # count if best ranked has lowest RMSD 
+        count += 1 if rmsd_best_rank == np.min(pose_rmsd) else 0
+
+        prots = np.append(prots, prot)
+    # num prots with rank1 pose having lowest RMSD % 
+    top1_rmsd_perc = round(count/len(prots) * 100, 2)
+
+    # spearman and p val
+    spearman_corr, p_value = spearmanr(df["confidence_score"], df["RMSD"])
+    return top1_rmsd_perc, round(spearman_corr, 4), p_value
 
 def main():
     pose_bust_cols = ['file',
@@ -347,8 +404,9 @@ def main():
     'centroid_distance']
     true_poses = '/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/data/CSKDE95_datamol_af2'
     pred_poses = '/home/ymanasa/turbo/ymanasa/opt/DiffDockL-Cov/results/cskde95_inference'
-    rmsd_results = rmsd_only(true_poses, pred_poses)
-    print(f'top1_rmsd_perc: {rmsd_results[0]}, median_top1: {rmsd_results[1]}, std_top1: {rmsd_results[2]}', f'\n{len(rmsd_results[3])}', ' proteins did not have poses')
+    output = confidence_model_eval(true_poses, pred_poses)
+    print(output[0], output[1], output[2])
+    # print(f'top1_rmsd_perc: {rmsd_results[0]}, median_top1: {rmsd_results[1]}, std_top1: {rmsd_results[2]}', f'\n{len(rmsd_results[3])}', ' proteins did not have poses')
 
 if __name__ == "__main__":
     main()   
